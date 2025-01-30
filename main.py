@@ -16,7 +16,8 @@ def main():
 
     pc.create_index(
         name=index_name,
-        dimension=2, # adjust this to your model dimensions
+        # this should match the dimensions of the embeddings model you are using    
+        dimension=1024, 
         metric="cosine", # adjust this to your model metric
         spec=ServerlessSpec(
             cloud="aws",
